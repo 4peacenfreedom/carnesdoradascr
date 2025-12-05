@@ -5,7 +5,7 @@ export const heroSlides: HeroSlide[] = [
     id: 'slide-1',
     title: 'CALIDAD PREMIUM PARA TU COCINA',
     subtitle: 'MÁS DE 20 AÑOS DE EXPERIENCIA',
-    image: '/assets/images/team/logo_dark.png',
+    image: '/assets/images/team/logo_dark.webp',
     cta: {
       text: 'Conócenos',
       link: '#nosotros',
@@ -15,7 +15,7 @@ export const heroSlides: HeroSlide[] = [
     id: 'slide-2',
     title: 'EXCELENCIA EN CADA CORTE',
     subtitle: 'CORTES NACIONALES E IMPORTADOS',
-    image: '/assets/images/team/chef_sosteniendo_ribeye.png',
+    image: '/assets/images/team/chef_sosteniendo_ribeye.webp',
     cta: {
       text: 'COTIZAR',
       link: '/contacto',
@@ -25,7 +25,7 @@ export const heroSlides: HeroSlide[] = [
     id: 'slide-3',
     title: 'ENTREGA PUNTUAL CERTIFICADA',
     subtitle: 'VALLE CENTRAL • PACÍFICO • ZONA NORTE',
-    image: '/assets/images/team/repartidor.png',
+    image: '/assets/images/team/repartidor.webp',
     cta: {
       text: 'CONTÁCTANOS',
       link: '/contacto',
