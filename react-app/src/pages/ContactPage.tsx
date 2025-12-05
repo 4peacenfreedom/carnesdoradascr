@@ -35,7 +35,7 @@ export default function ContactPage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/assets/images/contacto/contacto.jpg"
+                  src="/assets/images/contacto/contacto.webp"
                   alt="Servicio de entrega de carnes premium"
                   className="w-full h-full object-cover"
                 />
@@ -59,7 +59,7 @@ export default function ContactPage() {
       <section
         className="py-16 md:py-20 bg-cover bg-center relative"
         style={{
-          backgroundImage: 'url(/assets/images/contacto/carnesdoradascr_contacto_bg.png)',
+          backgroundImage: 'url(/assets/images/contacto/carnesdoradascr_contacto_bg.webp)',
         }}
       >
         {/* Overlay */}
