@@ -20,6 +20,11 @@ export default {
           800: '#420D0F',
           900: '#210607',
         },
+        dark: {
+          DEFAULT: '#1E1D1D',
+          100: '#100F0F',
+          900: '#000000',
+        },
         gray: {
           light: '#EBE3D9',
           DEFAULT: '#D7D3CB',
