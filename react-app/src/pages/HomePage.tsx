@@ -4,6 +4,10 @@ import AboutSection from '@/components/home/AboutSection'
 import ClientCarousel from '@/components/home/ClientCarousel'
 import ProductsCarousel from '@/components/home/ProductsCarousel'
 import ProductsTabs from '@/components/home/ProductsTabs'
+import DeliverySection from '@/components/home/DeliverySection'
+import WhyChooseSection from '@/components/home/WhyChooseSection'
+import TestimonialsCarousel from '@/components/home/TestimonialsCarousel'
+import BlogCarousel from '@/components/home/BlogCarousel'
 
 export default function HomePage() {
   return (
@@ -23,16 +27,17 @@ export default function HomePage() {
       {/* Products Tabs */}
       <ProductsTabs />
 
-      {/* More sections coming soon... */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="inline-block px-6 py-3 bg-gray-50 rounded-lg border border-gray-200">
-            <span className="text-gray-600">
-              🚧 Más secciones en construcción (Entregas, Testimonios, Blog)...
-            </span>
-          </div>
-        </div>
-      </section>
+      {/* Delivery Section */}
+      <DeliverySection />
+
+      {/* Why Choose Section */}
+      <WhyChooseSection />
+
+      {/* Testimonials Carousel */}
+      <TestimonialsCarousel />
+
+      {/* Blog Carousel */}
+      <BlogCarousel />
     </Layout>
   )
 }
