@@ -26,14 +26,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col">
-              <span className="text-2xl font-heading font-bold text-primary">
-                CARNES DORADAS
-              </span>
-              <span className="text-xs text-gray-600 tracking-wider">
-                DE COSTA RICA
-              </span>
-            </div>
+            <img
+              src="/assets/images/logo_carnesdoradascr.svg"
+              alt="Carnes Doradas de Costa Rica"
+              className="h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
