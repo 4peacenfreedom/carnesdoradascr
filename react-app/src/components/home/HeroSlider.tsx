@@ -1,19 +1,21 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules'
 import { Link } from 'react-router-dom'
 import { heroSlides } from '@/data/hero-slides'
 import { Button } from '@/components/ui/button'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
 
 export default function HeroSlider() {
   return (
     <section id="inicio" className="relative bg-gray-50">
       <Swiper
-        modules={[Autoplay, Pagination, EffectFade]}
+        modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade"
         slidesPerView={1}
         autoplay={{
@@ -23,8 +25,11 @@ export default function HeroSlider() {
         speed={1000}
         pagination={{
           clickable: true,
-          bulletClass: 'swiper-pagination-bullet !bg-primary',
-          bulletActiveClass: 'swiper-pagination-bullet-active !bg-primary',
+          el: '.hero-pagination',
+        }}
+        navigation={{
+          nextEl: '.hero-next',
+          prevEl: '.hero-prev',
         }}
         loop={true}
         className="hero-slider"
@@ -62,7 +67,8 @@ export default function HeroSlider() {
                         <Button
                           asChild
                           size="xl"
-                          className="font-semibold uppercase tracking-wide"
+                          variant="default"
+                          className="font-semibold uppercase tracking-wide bg-primary hover:bg-primary/90 text-white shadow-lg"
                         >
                           {slide.cta.link.startsWith('#') ? (
                             <a
@@ -148,17 +154,41 @@ export default function HeroSlider() {
         ))}
       </Swiper>
 
+      {/* Custom Navigation Arrows */}
+      <button
+        className="hero-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:text-primary/80 transition-all"
+        aria-label="Slide anterior"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        className="hero-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:text-primary/80 transition-all"
+        aria-label="Slide siguiente"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* Custom Pagination (dots) */}
+      <div className="hero-pagination absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3" />
+
       <style>{`
-        .hero-slider .swiper-pagination {
-          bottom: 2rem !important;
+        .hero-pagination .swiper-pagination-bullet {
+          width: 14px;
+          height: 14px;
+          background: #ffffff;
+          opacity: 0.6;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: 2px solid #A42125;
         }
-        .hero-slider .swiper-pagination-bullet {
-          width: 12px;
-          height: 12px;
-          opacity: 0.5;
+        .hero-pagination .swiper-pagination-bullet:hover {
+          opacity: 0.9;
+          transform: scale(1.1);
         }
-        .hero-slider .swiper-pagination-bullet-active {
+        .hero-pagination .swiper-pagination-bullet-active {
+          background: #A42125;
           opacity: 1;
+          transform: scale(1.2);
         }
       `}</style>
     </section>
