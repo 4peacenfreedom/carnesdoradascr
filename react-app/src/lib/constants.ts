@@ -18,7 +18,7 @@ export const CONTACT_INFO: ContactInfo = {
 
 // Redes sociales
 export const SOCIAL_MEDIA: SocialMedia = {
-  facebook: 'https://facebook.com/carnesdoradascr',
+  facebook: 'https://facebook.com/carnesdoradas',
   instagram: 'https://instagram.com/carnesdoradascr',
 }
 
@@ -28,7 +28,7 @@ export const NAVIGATION = [
   { id: 'nosotros', label: 'Nosotros', href: '#nosotros' },
   { id: 'productos', label: 'Productos', href: '#productos' },
   { id: 'entregas', label: 'Entregas', href: '#entregas' },
-  { id: 'blogs', label: 'Noticias', href: '#blogs' },
+  { id: 'blogs', label: 'Noticias', href: '#blog' },
 ] as const
 
 // Categorías de productos
