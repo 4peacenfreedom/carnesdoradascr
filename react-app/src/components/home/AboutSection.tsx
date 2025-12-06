@@ -14,7 +14,7 @@ export default function AboutSection() {
               <div className="col-span-2">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="/assets/images/about/about-3-1.jpg"
+                    src="/assets/images/about/about-3-1.webp"
                     alt="Carnes premium de alta calidad"
                     className="w-full h-full object-cover"
                   />
