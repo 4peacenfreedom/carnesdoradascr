@@ -62,7 +62,7 @@ export default function HeroSlider() {
                         <Button
                           asChild
                           size="xl"
-                          className="font-semibold uppercase tracking-wide !bg-primary !text-white hover:!bg-primary/90"
+                          className="font-semibold uppercase tracking-wide"
                         >
                           {slide.cta.link.startsWith('#') ? (
                             <a
@@ -95,7 +95,7 @@ export default function HeroSlider() {
                     </p>
                   </div>
 
-                  {/* Image Side */}
+                  {/* Image Slide */}
                   <div className="relative flex items-center justify-center">
                     <div className="relative w-full max-w-md lg:max-w-lg mx-auto">
                       {/* Decorative background circle */}
