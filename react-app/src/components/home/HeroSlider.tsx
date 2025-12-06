@@ -67,8 +67,12 @@ export default function HeroSlider() {
                         <Button
                           asChild
                           size="xl"
+<<<<<<< HEAD
                           variant="default"
                           className="font-semibold uppercase tracking-wide bg-primary hover:bg-primary/90 text-white shadow-lg"
+=======
+                          className="font-semibold uppercase tracking-wide !bg-primary !text-white hover:!bg-primary/90"
+>>>>>>> 21312a8bddf446b4e979e27a2ed11cbbf4aed224
                         >
                           {slide.cta.link.startsWith('#') ? (
                             <a
