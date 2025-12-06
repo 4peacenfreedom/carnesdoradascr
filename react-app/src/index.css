@@ -5,11 +5,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
-@layer base {
-  :root {
-    --color-primary: 164 33 37;
-  }
+@theme {
+  /* Colores de la marca */
+  --color-primary-50: #f9e8e9;
+  --color-primary-100: #f2d1d2;
+  --color-primary-200: #e5a3a6;
+  --color-primary-300: #d87579;
+  --color-primary-400: #cb474d;
+  --color-primary-500: #a42125;
+  --color-primary-600: #831a1e;
+  --color-primary-700: #621316;
+  --color-primary-800: #420d0f;
+  --color-primary-900: #210607;
+  --color-primary: #a42125;
 
+  --color-dark: #1e1d1d;
+  --color-dark-100: #100f0f;
+  --color-dark-900: #000000;
+}
+
+@layer base {
   body {
     font-family: "Plus Jakarta Sans", sans-serif;
   }
