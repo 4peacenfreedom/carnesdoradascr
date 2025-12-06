@@ -28,7 +28,7 @@ export const NAVIGATION = [
   { id: 'nosotros', label: 'Nosotros', href: '#nosotros' },
   { id: 'productos', label: 'Productos', href: '#productos' },
   { id: 'entregas', label: 'Entregas', href: '#entregas' },
-  { id: 'blogs', label: 'Noticias', href: '#blogs' },
+  { id: 'blogs', label: 'Noticias', href: '#blog' },
 ] as const
 
 // Categorías de productos
