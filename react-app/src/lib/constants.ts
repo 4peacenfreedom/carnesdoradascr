@@ -18,7 +18,7 @@ export const CONTACT_INFO: ContactInfo = {
 
 // Redes sociales
 export const SOCIAL_MEDIA: SocialMedia = {
-  facebook: 'https://facebook.com/carnesdoradascr',
+  facebook: 'https://facebook.com/carnesdoradas',
   instagram: 'https://instagram.com/carnesdoradascr',
 }
 
