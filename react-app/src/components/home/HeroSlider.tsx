@@ -153,12 +153,20 @@ export default function HeroSlider() {
           bottom: 2rem !important;
         }
         .hero-slider .swiper-pagination-bullet {
-          width: 12px;
-          height: 12px;
+          width: 14px;
+          height: 14px;
           opacity: 0.5;
+          cursor: pointer;
+          background: #ffffff;
+          border: 2px solid #a42125;
+        }
+        .hero-slider .swiper-pagination-bullet:hover {
+          opacity: 0.8;
+          transform: scale(1.1);
         }
         .hero-slider .swiper-pagination-bullet-active {
           opacity: 1;
+          background: #a42125 !important;
         }
       `}</style>
     </section>
