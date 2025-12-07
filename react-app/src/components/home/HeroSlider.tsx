@@ -33,8 +33,24 @@ export default function HeroSlider() {
         {heroSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center pb-16 md:pb-8">
-              {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-50 to-white" />
+              {/* Background with meat shapes pattern */}
+              <div className="absolute inset-0">
+                {/* Meat shapes background image */}
+                <div
+                  className="absolute inset-0 opacity-10"
+                  style={{
+                    backgroundImage: 'url(/assets/images/shapes/meat_shapes.webp)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'repeat',
+                  }}
+                />
+                {/* Color overlay */}
+                <div
+                  className="absolute inset-0 opacity-40"
+                  style={{ backgroundColor: '#fff3cd' }}
+                />
+              </div>
 
               <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
