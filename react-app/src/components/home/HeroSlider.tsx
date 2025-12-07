@@ -15,6 +15,9 @@ export default function HeroSlider() {
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
+        fadeEffect={{
+          crossFade: true,
+        }}
         slidesPerView={1}
         autoplay={{
           delay: 7000,
