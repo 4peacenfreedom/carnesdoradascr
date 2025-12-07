@@ -29,7 +29,7 @@ export default function HeroSlider() {
       >
         {heroSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center">
+            <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center pb-16 md:pb-8">
               {/* Background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-50 to-white" />
 
@@ -100,11 +100,11 @@ export default function HeroSlider() {
                       <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-110" />
 
                       {/* Image */}
-                      <div className="relative z-10">
+                      <div className="relative z-10 max-h-[350px] md:max-h-[450px] lg:max-h-none">
                         <img
                           src={slide.image}
                           alt={slide.title}
-                          className="w-full h-auto object-contain drop-shadow-2xl"
+                          className="w-full h-full max-h-[350px] md:max-h-[450px] lg:max-h-none object-contain drop-shadow-2xl"
                         />
                       </div>
                     </div>
