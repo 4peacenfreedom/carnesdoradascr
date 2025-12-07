@@ -23,8 +23,6 @@ export default function HeroSlider() {
         speed={1000}
         pagination={{
           clickable: true,
-          bulletClass: 'swiper-pagination-bullet !bg-primary',
-          bulletActiveClass: 'swiper-pagination-bullet-active !bg-primary',
         }}
         loop={true}
         className="hero-slider"
