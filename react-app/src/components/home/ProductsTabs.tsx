@@ -44,7 +44,7 @@ export default function ProductsTabs() {
                 {/* Products grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {products.map((product) => (
-                    <Card key={product.id} className="hover:shadow-lg transition-shadow">
+                    <Card key={product.id} className="hover:shadow-lg transition-shadow border-gray-200">
                       <CardContent className="p-6">
                         {/* Content */}
                         <div>
