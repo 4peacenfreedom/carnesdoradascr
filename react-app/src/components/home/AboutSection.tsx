@@ -12,7 +12,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               {/* Main image */}
               <div className="col-span-2">
-                <div className="relative h-[382px] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src="/assets/images/team/andres.jpg"
                     alt="Andrés Ramírez - Director General"
