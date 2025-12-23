@@ -10,7 +10,7 @@ export default function ClientCarousel() {
       <div className="container mx-auto px-4">
         {/* Section title */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-heading font-semibold text-dark mb-2">
+          <h3 className="text-2xl font-heading font-semibold text-dark mb-2 uppercase">
             Clientes que Confían en Nosotros
           </h3>
           <p className="text-gray-600">
