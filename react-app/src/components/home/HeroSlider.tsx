@@ -11,7 +11,26 @@ import 'swiper/css/effect-fade'
 
 export default function HeroSlider() {
   return (
-    <section id="inicio" className="relative bg-gray-50">
+    <section id="inicio" className="relative">
+      {/* Background with meat shapes pattern - covers entire section */}
+      <div className="absolute inset-0">
+        {/* Meat shapes background image */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: 'url(/assets/images/shapes/meat_shapes.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+        {/* Color overlay */}
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{ backgroundColor: '#fff3cd' }}
+        />
+      </div>
+
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -33,25 +52,6 @@ export default function HeroSlider() {
         {heroSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center pb-16 md:pb-8">
-              {/* Background with meat shapes pattern */}
-              <div className="absolute inset-0">
-                {/* Meat shapes background image */}
-                <div
-                  className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: 'url(/assets/images/shapes/meat_shapes.webp)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'repeat',
-                  }}
-                />
-                {/* Color overlay */}
-                <div
-                  className="absolute inset-0 opacity-40"
-                  style={{ backgroundColor: '#fff3cd' }}
-                />
-              </div>
-
               <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   {/* Content Side */}
