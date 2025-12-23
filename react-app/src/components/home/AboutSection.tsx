@@ -91,10 +91,6 @@ export default function AboutSection() {
                   </p>
                   <p className="text-sm text-gray-500">Director General</p>
                 </div>
-                {/* Signature (decorative text) */}
-                <div className="font-decorative text-3xl text-primary">
-                  Andrés
-                </div>
               </div>
             </div>
 
