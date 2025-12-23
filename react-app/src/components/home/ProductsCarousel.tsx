@@ -58,14 +58,18 @@ export default function ProductsCarousel() {
           {featuredProducts.map((product) => (
             <SwiperSlide key={product.id}>
               <Card className="group hover:shadow-xl transition-shadow duration-300 border-gray-200">
-                <CardContent className="p-6">
-                  {/* Product image placeholder */}
-                  <div className="aspect-square bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg mb-4 flex items-center justify-center group-hover:from-primary/10 group-hover:to-primary/20 transition-colors duration-300">
-                    <div className="text-6xl">🥩</div>
+                <CardContent className="p-0">
+                  {/* Product image */}
+                  <div className="aspect-square overflow-hidden rounded-t-lg">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
 
                   {/* Product info */}
-                  <div className="space-y-2">
+                  <div className="p-6 space-y-2">
                     <h3 className="font-heading font-semibold text-lg text-dark group-hover:text-primary transition-colors uppercase">
                       {product.name}
                     </h3>

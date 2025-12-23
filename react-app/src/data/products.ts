@@ -9,6 +9,7 @@ export const products: Product[] = [
     category: 'res',
     featured: true,
     rating: 5,
+    image: '/assets/images/products/ribeye.jpeg',
   },
   {
     id: 'tomahawk',
@@ -17,6 +18,7 @@ export const products: Product[] = [
     category: 'res',
     featured: true,
     rating: 5,
+    image: '/assets/images/products/tomahawk.jpeg',
   },
   {
     id: 'filete-mignon',
@@ -47,8 +49,19 @@ export const products: Product[] = [
   {
     id: 'otros-res',
     name: 'OTROS CORTES',
-    description: 'T-Bone, porterhouse, asado de tira, falda y cortes personalizados según necesidad',
+    description: 'Porterhouse, asado de tira, falda y cortes personalizados según necesidad',
     category: 'res',
+  },
+
+  // CARNE DE RES - T-BONE
+  {
+    id: 't-bone',
+    name: 'T-BONE',
+    description: 'Corte icónico que combina filet mignon y new york strip en un solo bistec, el mejor de dos mundos',
+    category: 'res',
+    featured: true,
+    rating: 5,
+    image: '/assets/images/products/tbone.jpeg',
   },
 
   // CARNE DE CERDO
@@ -59,6 +72,7 @@ export const products: Product[] = [
     category: 'cerdo',
     featured: true,
     rating: 5,
+    image: '/assets/images/products/babybackrib.jpeg',
   },
   {
     id: 'st-louis',
@@ -91,7 +105,6 @@ export const products: Product[] = [
     name: 'PECHUGA',
     description: 'Filetes sin hueso y sin piel, magros y de cocción rápida',
     category: 'pollo',
-    featured: true,
     rating: 5,
   },
   {
