@@ -62,7 +62,7 @@ export default function ContactForm() {
     <div className="space-y-6">
       {/* Form Header */}
       <div>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-dark mb-3">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-dark mb-3 uppercase">
           Pongámonos en Contacto
         </h2>
         <p className="text-gray-600 leading-relaxed">

@@ -27,7 +27,7 @@ export default function BlogCarousel() {
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">
                 Nuestro Blog
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4 uppercase">
                 Consejos y{' '}
                 <span className="text-primary">Novedades</span>
               </h2>
@@ -98,7 +98,7 @@ export default function BlogCarousel() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="font-heading font-bold text-xl text-dark mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                        <h3 className="font-heading font-bold text-xl text-dark mb-3 line-clamp-2 group-hover:text-primary transition-colors uppercase">
                           {post.title}
                         </h3>
 

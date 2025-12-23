@@ -12,7 +12,7 @@ export default function ProductsTabs() {
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Catálogo Completo
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4 uppercase">
             Productos <span className="text-primary">Disponibles</span>
           </h2>
           <p className="text-gray-600">
@@ -54,7 +54,7 @@ export default function ProductsTabs() {
 
                           {/* Content */}
                           <div className="flex-1">
-                            <h3 className="font-heading font-semibold text-lg text-dark mb-2">
+                            <h3 className="font-heading font-semibold text-lg text-dark mb-2 uppercase">
                               {product.name}
                             </h3>
                             <p className="text-sm text-gray-600">
@@ -70,7 +70,7 @@ export default function ProductsTabs() {
                 {/* Additional info */}
                 <Card className="bg-primary/5 border-primary/20">
                   <CardContent className="p-6">
-                    <h3 className="font-heading font-semibold text-lg text-dark mb-2">
+                    <h3 className="font-heading font-semibold text-lg text-dark mb-2 uppercase">
                       ¿No encuentras lo que buscas?
                     </h3>
                     <p className="text-gray-700 mb-2">

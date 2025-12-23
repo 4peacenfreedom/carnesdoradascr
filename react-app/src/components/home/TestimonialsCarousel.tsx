@@ -17,7 +17,7 @@ export default function TestimonialsCarousel() {
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Testimonios Reales
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4 uppercase">
             Lo Que Dicen{' '}
             <span className="text-primary">Nuestros Clientes</span>
           </h2>

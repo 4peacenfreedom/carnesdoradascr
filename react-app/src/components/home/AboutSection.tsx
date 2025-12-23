@@ -47,7 +47,7 @@ export default function AboutSection() {
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark leading-tight uppercase">
               Calidad Premium en{' '}
               <span className="text-primary">Cada Corte</span>
             </h2>

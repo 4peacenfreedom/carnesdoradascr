@@ -23,7 +23,7 @@ export default function DeliverySection() {
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark leading-tight uppercase">
               Flotilla Propia con{' '}
               <span className="text-primary">Refrigeración Certificada</span>
             </h2>
@@ -38,7 +38,7 @@ export default function DeliverySection() {
 
             {/* Coverage areas */}
             <div className="pt-4">
-              <h3 className="font-heading font-semibold text-lg text-dark mb-4">
+              <h3 className="font-heading font-semibold text-lg text-dark mb-4 uppercase">
                 Zonas de Cobertura
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

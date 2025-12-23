@@ -18,7 +18,7 @@ export default function WhyChooseSection() {
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             ¿Por qué Carnes Doradas?
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4 uppercase">
             Algunas Razones para{' '}
             <span className="text-primary">Elegirnos</span>
           </h2>
@@ -48,7 +48,7 @@ export default function WhyChooseSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="font-heading font-semibold text-lg text-dark mb-2">
+                <h3 className="font-heading font-semibold text-lg text-dark mb-2 uppercase">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">

@@ -16,7 +16,7 @@ export default function ProductsCarousel() {
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Nuestros Productos
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mt-3 mb-4 uppercase">
             Cortes <span className="text-primary">Premium</span>
           </h2>
           <p className="text-gray-600">
@@ -66,7 +66,7 @@ export default function ProductsCarousel() {
 
                   {/* Product info */}
                   <div className="space-y-2">
-                    <h3 className="font-heading font-semibold text-lg text-dark group-hover:text-primary transition-colors">
+                    <h3 className="font-heading font-semibold text-lg text-dark group-hover:text-primary transition-colors uppercase">
                       {product.name}
                     </h3>
                     <p className="text-sm text-gray-600 line-clamp-2">
