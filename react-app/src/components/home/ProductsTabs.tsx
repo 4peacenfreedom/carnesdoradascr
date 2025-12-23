@@ -46,21 +46,14 @@ export default function ProductsTabs() {
                   {products.map((product) => (
                     <Card key={product.id} className="hover:shadow-lg transition-shadow">
                       <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          {/* Icon/emoji */}
-                          <div className="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center text-3xl">
-                            🥩
-                          </div>
-
-                          {/* Content */}
-                          <div className="flex-1">
-                            <h3 className="font-heading font-semibold text-lg text-dark mb-2 uppercase">
-                              {product.name}
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                              {product.description}
-                            </p>
-                          </div>
+                        {/* Content */}
+                        <div>
+                          <h3 className="font-heading font-semibold text-lg text-dark mb-2 uppercase">
+                            {product.name}
+                          </h3>
+                          <p className="text-sm text-gray-600">
+                            {product.description}
+                          </p>
                         </div>
                       </CardContent>
                     </Card>
