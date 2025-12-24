@@ -1,0 +1,58 @@
+import type { Testimonial } from '@/types'
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    name: 'María Romero',
+    position: 'Gerente',
+    company: 'Rest. Bella Italia',
+    image: '/assets/images/testimonials/testimonial-3-2.jpg',
+    rating: 5,
+    text: 'La calidad de las carnes es excepcional. Nuestros clientes siempre elogian nuestros platos y la consistencia en cada entrega es perfecta.',
+  },
+  {
+    id: '2',
+    name: 'Fabian Romero',
+    position: 'Director',
+    company: 'Imarketingcr',
+    image: '/assets/images/testimonials/testimonial-3-3.jpg',
+    rating: 5,
+    text: 'Servicio profesional y puntual. La cadena de frío siempre se mantiene perfecta y los cortes llegan exactamente como los pedimos.',
+  },
+  {
+    id: '3',
+    name: 'Carlos Sánchez',
+    position: 'Chef Ejecutivo',
+    company: 'Hotel Vista Mar',
+    image: '/assets/images/testimonials/testimonial-3-1.jpg',
+    rating: 5,
+    text: 'Trabajamos con Carnes Doradas desde hace 5 años. La calidad premium de sus productos y su asesoría especializada son invaluables para nuestro menú.',
+  },
+  {
+    id: '4',
+    name: 'Ana Gutiérrez',
+    position: 'Propietaria',
+    company: 'Parrilla Don José',
+    image: '/assets/images/testimonials/testimonial-3-4.jpg',
+    rating: 5,
+    text: 'Los ribeyes y tomahawks son espectaculares. Nuestros comensales siempre quedan satisfechos con la calidad de la carne.',
+  },
+  {
+    id: '5',
+    name: 'Roberto Jiménez',
+    position: 'Gerente',
+    company: 'Rest. El Mirador',
+    image: '/assets/images/testimonials/testimonial-3-5.jpg',
+    rating: 5,
+    text: 'Excelente servicio al cliente. Siempre atentos a nuestras necesidades y con entregas puntuales. Los recomiendo ampliamente.',
+  },
+  {
+    id: '6',
+    name: 'Laura Pérez',
+    position: 'Chef',
+    company: 'Bistro Gourmet',
+    image: '/assets/images/testimonials/testimonial-3-6.jpg',
+    rating: 5,
+    text: 'La trazabilidad y certificación de sus productos nos da total confianza. Los cortes personalizados son perfectos para nuestro concepto.',
+  },
+]
