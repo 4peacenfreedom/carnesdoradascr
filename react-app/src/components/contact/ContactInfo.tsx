@@ -19,10 +19,10 @@ export default function ContactInfo() {
         {/* Header */}
         <div className="space-y-3">
           <h4 className="text-2xl font-heading font-bold text-dark uppercase">
-            Siempre Disponibles para Atenderle
+            Te Ayudamos a Escoger?
           </h4>
           <p className="text-gray-600">
-            Nuestro equipo está listo para atenderle y resolver cualquier consulta
+            Nuestro equipo está listo para atenderle, de lunes a viernes de 7am a 5pm y resolver cualquier consulta
             sobre nuestros productos y servicios.
           </p>
         </div>
