@@ -1,7 +1,34 @@
+import { useState, useEffect } from 'react'
 import { Phone, Mail, MapPin } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants'
 
 export default function ContactInfo() {
+  const [isBusinessHours, setIsBusinessHours] = useState(false)
+
+  useEffect(() => {
+    const checkBusinessHours = () => {
+      // Obtener hora actual en Costa Rica (GMT-6)
+      const now = new Date()
+      const costaRicaTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Costa_Rica' }))
+
+      const day = costaRicaTime.getDay() // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+      const hour = costaRicaTime.getHours()
+
+      // Lunes a Viernes (1-5) y entre 7am y 5pm (7-17)
+      const isWeekday = day >= 1 && day <= 5
+      const isWorkingHour = hour >= 7 && hour < 17
+
+      setIsBusinessHours(isWeekday && isWorkingHour)
+    }
+
+    // Verificar inmediatamente
+    checkBusinessHours()
+
+    // Verificar cada minuto
+    const interval = setInterval(checkBusinessHours, 60000)
+
+    return () => clearInterval(interval)
+  }, [])
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden">
       {/* Background pattern */}
@@ -37,15 +64,31 @@ export default function ContactInfo() {
               </div>
             </div>
             <div className="flex-1">
-              <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold">
-                Llame Ahora
-              </span>
-              <a
-                href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`}
-                className="block text-lg font-semibold text-dark hover:text-primary transition-colors mt-1"
-              >
-                {CONTACT_INFO.phone}
-              </a>
+              {isBusinessHours ? (
+                <>
+                  <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold">
+                    Llame Ahora
+                  </span>
+                  <a
+                    href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`}
+                    className="block text-lg font-semibold text-dark hover:text-primary transition-colors mt-1"
+                  >
+                    {CONTACT_INFO.phone}
+                  </a>
+                </>
+              ) : (
+                <>
+                  <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold">
+                    Teléfono
+                  </span>
+                  <div className="block text-lg font-semibold text-gray-400 mt-1">
+                    {CONTACT_INFO.phone}
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">
+                    Llámanos entre semana de 7am y 5pm
+                  </p>
+                </>
+              )}
             </div>
           </div>
 
