@@ -9,6 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const isContactPage = location.pathname === '/contacto'
 
   const scrollToSection = (href: string) => {
     if (isHomePage && href.startsWith('#')) {
@@ -18,6 +19,11 @@ export default function Header() {
         setIsMenuOpen(false)
       }
     }
+  }
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent('Hola, quisiera consultar sobre sus productos y servicios')
+    window.open(`https://wa.me/${CONTACT_INFO.whatsapp}?text=${message}`, '_blank')
   }
 
   return (
@@ -108,11 +114,17 @@ export default function Header() {
                 </a>
               </div>
 
-              <Button asChild>
-                <Link to="/contacto">
-                  Contáctanos
-                </Link>
-              </Button>
+              {isContactPage ? (
+                <Button onClick={handleWhatsAppClick}>
+                  Enviar WhatsApp
+                </Button>
+              ) : (
+                <Button asChild>
+                  <Link to="/contacto">
+                    Contáctanos
+                  </Link>
+                </Button>
+              )}
             </div>
           </div>
 
@@ -195,11 +207,17 @@ export default function Header() {
                 <span className="font-semibold">{CONTACT_INFO.phone}</span>
               </a>
 
-              <Button asChild className="w-full">
-                <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
-                  Contáctanos
-                </Link>
-              </Button>
+              {isContactPage ? (
+                <Button onClick={handleWhatsAppClick} className="w-full">
+                  Enviar WhatsApp
+                </Button>
+              ) : (
+                <Button asChild className="w-full">
+                  <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
+                    Contáctanos
+                  </Link>
+                </Button>
+              )}
             </nav>
           </div>
         )}
