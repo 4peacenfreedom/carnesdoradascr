@@ -23,7 +23,7 @@ export default function Header() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent('Hola, quisiera consultar sobre sus productos y servicios')
-    window.open(`https://wa.me/${CONTACT_INFO.whatsapp}?text=${message}`, '_blank')
+    window.open(`https://wa.me/50688234567?text=${message}`, '_blank')
   }
 
   return (
@@ -116,7 +116,7 @@ export default function Header() {
 
               {isContactPage ? (
                 <Button onClick={handleWhatsAppClick}>
-                  Enviar WhatsApp
+                  Abrir WhatsApp
                 </Button>
               ) : (
                 <Button asChild>
@@ -209,7 +209,7 @@ export default function Header() {
 
               {isContactPage ? (
                 <Button onClick={handleWhatsAppClick} className="w-full">
-                  Enviar WhatsApp
+                  Abrir WhatsApp
                 </Button>
               ) : (
                 <Button asChild className="w-full">
