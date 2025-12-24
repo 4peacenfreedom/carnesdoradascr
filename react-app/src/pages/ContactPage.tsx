@@ -11,7 +11,7 @@ export default function ContactPage() {
       <section className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-dark mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-dark mb-4 uppercase">
               Contacto
             </h1>
             <p className="text-lg text-gray-600">
