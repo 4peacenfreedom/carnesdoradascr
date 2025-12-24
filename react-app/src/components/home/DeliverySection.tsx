@@ -1,7 +1,15 @@
+import { useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Truck, MapPin, Phone } from 'lucide-react'
 
 export default function DeliverySection() {
+  useEffect(() => {
+    // Trigger Facebook SDK to parse the page after component mounts
+    if (typeof window !== 'undefined' && (window as any).FB) {
+      ;(window as any).FB.XFBML.parse()
+    }
+  }, [])
+
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
       'Hola, quisiera consultar sobre el servicio de entrega en mi zona'
