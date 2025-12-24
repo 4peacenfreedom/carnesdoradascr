@@ -1,9 +1,21 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react'
 import { CONTACT_INFO, SOCIAL_MEDIA } from '@/lib/constants'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+  const isContactPage = location.pathname === '/contacto'
+
+  const handleScrollToSection = (sectionId: string) => {
+    if (isHomePage) {
+      const element = document.querySelector(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -61,29 +73,57 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#nosotros"
-                  className="text-sm hover:text-primary transition-colors"
-                >
-                  Nosotros
-                </a>
+                {isHomePage ? (
+                  <a
+                    href="#nosotros"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleScrollToSection('#nosotros')
+                    }}
+                    className="text-sm hover:text-primary transition-colors"
+                  >
+                    Nosotros
+                  </a>
+                ) : (
+                  <Link
+                    to="/#nosotros"
+                    className="text-sm hover:text-primary transition-colors"
+                  >
+                    Nosotros
+                  </Link>
+                )}
               </li>
               <li>
-                <a
-                  href="#productos"
-                  className="text-sm hover:text-primary transition-colors"
-                >
-                  Productos
-                </a>
+                {isHomePage ? (
+                  <a
+                    href="#productos"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleScrollToSection('#productos')
+                    }}
+                    className="text-sm hover:text-primary transition-colors"
+                  >
+                    Productos
+                  </a>
+                ) : (
+                  <Link
+                    to="/#productos"
+                    className="text-sm hover:text-primary transition-colors"
+                  >
+                    Productos
+                  </Link>
+                )}
               </li>
-              <li>
-                <Link
-                  to="/contacto"
-                  className="text-sm hover:text-primary transition-colors"
-                >
-                  Contacto
-                </Link>
-              </li>
+              {!isContactPage && (
+                <li>
+                  <Link
+                    to="/contacto"
+                    className="text-sm hover:text-primary transition-colors"
+                  >
+                    Contacto
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 
