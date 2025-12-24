@@ -84,33 +84,16 @@ export default function DeliverySection() {
             </div>
           </div>
 
-          {/* Image Side */}
+          {/* Video Side */}
           <div className="relative">
-            <div className="relative">
-              {/* Main coverage map image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/assets/images/delivery/carnesdoradascr_dnd_estamos.png"
-                  alt="Mapa de cobertura de entregas Carnes Doradas"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute -top-6 -right-6 hidden lg:block">
-                <div className="bg-primary text-white rounded-full w-40 h-40 flex items-center justify-center shadow-2xl">
-                  <div className="text-center p-4">
-                    <Truck className="w-10 h-10 mx-auto mb-2" />
-                    <div className="text-xs font-semibold uppercase tracking-wider leading-tight">
-                      Entrega
-                      <br />
-                      Puntual
-                      <br />
-                      Certificada
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+              {/* Facebook Video Embed */}
+              <div
+                className="fb-video"
+                data-href="https://www.facebook.com/reel/1868576597364039/"
+                data-width="auto"
+                data-show-text="false"
+              />
             </div>
           </div>
         </div>
