@@ -5,6 +5,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { MessageCircle } from 'lucide-react'
 import type { Product } from '@/types'
 
 interface ProductModalProps {
@@ -15,6 +17,13 @@ interface ProductModalProps {
 
 export default function ProductModal({ product, open, onOpenChange }: ProductModalProps) {
   if (!product) return null
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(
+      `Hola! Me interesa el producto: ${product.name}. Me gustaría obtener más información sobre precios y disponibilidad.`
+    )
+    window.open(`https://wa.me/50688234567?text=${message}`, '_blank')
+  }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -41,9 +50,18 @@ export default function ProductModal({ product, open, onOpenChange }: ProductMod
 
           {/* Call to action */}
           <div className="mt-6 pt-6 border-t border-gray-300">
-            <p className="text-sm text-gray-800 text-center">
-              ¿Interesado en este producto? Contáctanos para obtener más información sobre precios y disponibilidad.
-            </p>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-sm text-gray-800 text-center md:text-left flex-1">
+                ¿Interesado en este producto? Contáctanos para obtener más información sobre precios y disponibilidad.
+              </p>
+              <Button
+                onClick={handleWhatsAppClick}
+                className="bg-green-600 hover:bg-green-700 text-white shrink-0"
+              >
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Contactar
+              </Button>
+            </div>
           </div>
         </div>
       </DialogContent>
