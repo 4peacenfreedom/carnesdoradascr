@@ -28,31 +28,20 @@ export default function ProductModal({ product, open, onOpenChange }: ProductMod
           </DialogDescription>
         </DialogHeader>
 
-        {/* Product image if available */}
-        {product.image && (
-          <div className="w-full aspect-video overflow-hidden rounded-lg mt-4">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-
         {/* Detailed description */}
         <div className="mt-6 space-y-4">
           <div>
-            <h3 className="font-heading font-semibold text-lg text-dark mb-2 uppercase">
+            <h3 className="font-heading font-semibold text-lg text-dark mb-3 uppercase">
               Características
             </h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-900 leading-relaxed text-base">
               {product.detailedDescription || product.description}
             </p>
           </div>
 
           {/* Call to action */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600 text-center">
+          <div className="mt-6 pt-6 border-t border-gray-300">
+            <p className="text-sm text-gray-800 text-center">
               ¿Interesado en este producto? Contáctanos para obtener más información sobre precios y disponibilidad.
             </p>
           </div>
