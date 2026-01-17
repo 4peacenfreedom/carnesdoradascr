@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
     company: 'Hotel Vista Mar',
     image: '/assets/images/testimonials/testimonial-3-1.jpg',
     rating: 5,
-    text: 'Trabajamos con Carnes Doradas desde hace 5 años. La calidad premium de sus productos y su asesoría especializada son invaluables para nuestro menú.',
+    text: 'La calidad premium de sus productos y su asesoría especializada son invaluables para nuestro menú.',
   },
   {
     id: '4',
