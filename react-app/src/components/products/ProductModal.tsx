@@ -18,7 +18,7 @@ export default function ProductModal({ product, open, onOpenChange }: ProductMod
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white/80 backdrop-blur-sm">
         <DialogHeader>
           <DialogTitle className="text-2xl md:text-3xl font-heading font-bold text-dark uppercase">
             {product.name}
