@@ -5,7 +5,7 @@ export const testimonials: Testimonial[] = [
     id: '1',
     name: 'María Romero',
     position: 'Gerente',
-    company: 'Rest. Bella Italia',
+    company: 'Rest. Bella Donna',
     image: '/assets/images/testimonials/testimonial-3-2.jpg',
     rating: 5,
     text: 'La calidad de las carnes es excepcional. Nuestros clientes siempre elogian nuestros platos y la consistencia en cada entrega es perfecta.',
