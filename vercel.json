@@ -1,8 +1,8 @@
 {
-  "buildCommand": "cd react-app && npm install && npm run build",
+  "buildCommand": "cd react-app && npm run build",
   "outputDirectory": "react-app/dist",
   "devCommand": "cd react-app && npm run dev",
-  "installCommand": "cd react-app && npm install",
+  "installCommand": "cd react-app && npm install --legacy-peer-deps",
   "framework": "vite",
   "rewrites": [
     {
