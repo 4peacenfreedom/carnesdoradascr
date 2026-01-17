@@ -39,7 +39,7 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
         </Button>
 
         {/* Native Share (mobile) */}
-        {navigator.share && (
+        {'share' in navigator && (
           <Button
             onClick={handleNativeShare}
             variant="outline"

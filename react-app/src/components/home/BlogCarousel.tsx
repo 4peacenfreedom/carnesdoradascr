@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper/modules'
-import { blogPosts } from '@/data/blog'
+import { blogPosts } from '@/data/blogs'
 import { Calendar, ArrowRight } from 'lucide-react'
 
 // Import Swiper styles
@@ -74,44 +75,53 @@ export default function BlogCarousel() {
                 {blogPosts.map((post) => (
                   <SwiperSlide key={post.id}>
                     <article className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group h-full">
-                      {/* Image */}
-                      <div className="relative aspect-[4/3] overflow-hidden">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        {/* Category badge */}
-                        <div className="absolute top-4 left-4">
-                          <span className="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                            {post.category}
-                          </span>
+                      {/* Image - Clickeable */}
+                      <Link to={`/blog/${post.slug}`}>
+                        <div className="relative aspect-[4/3] overflow-hidden">
+                          <img
+                            src={post.heroImage}
+                            alt={post.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                          {/* Category badge */}
+                          {post.tags && post.tags.length > 0 && (
+                            <div className="absolute top-4 left-4">
+                              <span className="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                                {post.tags[0]}
+                              </span>
+                            </div>
+                          )}
                         </div>
-                      </div>
+                      </Link>
 
                       {/* Content */}
                       <div className="p-6">
                         {/* Date */}
                         <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                           <Calendar className="w-4 h-4" />
-                          <time dateTime={post.date}>{formatDate(post.date)}</time>
+                          <time dateTime={post.publishDate}>{formatDate(post.publishDate)}</time>
                         </div>
 
-                        {/* Title */}
-                        <h3 className="font-heading font-bold text-xl text-dark mb-3 line-clamp-2 group-hover:text-primary transition-colors uppercase">
-                          {post.title}
-                        </h3>
+                        {/* Title - Clickeable */}
+                        <Link to={`/blog/${post.slug}`}>
+                          <h3 className="font-heading font-bold text-xl text-dark mb-3 line-clamp-2 group-hover:text-primary transition-colors uppercase">
+                            {post.title}
+                          </h3>
+                        </Link>
 
                         {/* Excerpt */}
                         <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                          {post.excerpt}
+                          {post.description}
                         </p>
 
-                        {/* Read more link */}
-                        <button className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                        {/* Read more link - Clickeable */}
+                        <Link 
+                          to={`/blog/${post.slug}`}
+                          className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider hover:gap-3 transition-all"
+                        >
                           Leer Más
                           <ArrowRight className="w-4 h-4" />
-                        </button>
+                        </Link>
                       </div>
                     </article>
                   </SwiperSlide>

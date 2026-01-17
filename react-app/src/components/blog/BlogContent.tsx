@@ -1,4 +1,4 @@
-import { BlogContent as BlogContentType } from '@/types/blog'
+import type { BlogContent as BlogContentType } from '@/types/blog'
 
 interface BlogContentProps {
   content: BlogContentType[]
