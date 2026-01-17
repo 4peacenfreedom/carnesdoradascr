@@ -1,13 +1,22 @@
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper/modules'
 import { featuredProducts } from '@/data/products'
 import { Card, CardContent } from '@/components/ui/card'
-import { Star } from 'lucide-react'
+import ProductModal from '@/components/products/ProductModal'
+import type { Product } from '@/types'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 
 export default function ProductsCarousel() {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product)
+    setIsModalOpen(true)
+  }
   return (
     <section id="productos" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
@@ -57,10 +66,16 @@ export default function ProductsCarousel() {
         >
           {featuredProducts.map((product) => (
             <SwiperSlide key={product.id}>
-              <Card className="group hover:shadow-xl transition-shadow duration-300 border-gray-200">
+              <Card className="group hover:shadow-xl transition-shadow duration-300 border-gray-200 cursor-pointer">
                 <CardContent className="p-0">
-                  {/* Product image */}
-                  <div className="aspect-square overflow-hidden rounded-t-lg">
+                  {/* Product image - Clickeable */}
+                  <div
+                    className="aspect-square overflow-hidden rounded-t-lg"
+                    onClick={() => handleProductClick(product)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === 'Enter' && handleProductClick(product)}
+                  >
                     <img
                       src={product.image}
                       alt={product.name}
@@ -70,24 +85,18 @@ export default function ProductsCarousel() {
 
                   {/* Product info */}
                   <div className="p-6 space-y-2">
-                    <h3 className="font-heading font-semibold text-lg text-dark group-hover:text-primary transition-colors uppercase">
+                    <h3
+                      className="font-heading font-semibold text-lg text-dark group-hover:text-primary transition-colors uppercase cursor-pointer"
+                      onClick={() => handleProductClick(product)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => e.key === 'Enter' && handleProductClick(product)}
+                    >
                       {product.name}
                     </h3>
                     <p className="text-sm text-gray-600 line-clamp-2">
                       {product.description}
                     </p>
-
-                    {/* Rating */}
-                    {product.rating && (
-                      <div className="flex items-center gap-1 pt-2">
-                        {Array.from({ length: product.rating }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                          />
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -114,6 +123,13 @@ export default function ProductsCarousel() {
             </svg>
           </button>
         </div>
+
+        {/* Product Modal */}
+        <ProductModal
+          product={selectedProduct}
+          open={isModalOpen}
+          onOpenChange={setIsModalOpen}
+        />
       </div>
     </section>
   )
