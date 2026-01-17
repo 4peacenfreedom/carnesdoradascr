@@ -3,6 +3,7 @@ export interface Product {
   id: string
   name: string
   description: string
+  detailedDescription?: string // Descripción extendida para modal
   category: 'res' | 'cerdo' | 'pollo' | 'especiales'
   image?: string
   rating?: number
