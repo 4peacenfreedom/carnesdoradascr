@@ -186,7 +186,7 @@ export default function Footer() {
               © {currentYear} Carnes Doradas de Costa Rica S.A. Todos los derechos reservados.
             </p>
             <p className="text-xs text-gray-600">
-              Sitio desarrollado con React + TypeScript + Vite
+              Certified Angus Beef 
             </p>
           </div>
         </div>
