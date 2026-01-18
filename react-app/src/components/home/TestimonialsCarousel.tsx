@@ -1,5 +1,7 @@
+import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import type { Swiper as SwiperType } from 'swiper'
 import { testimonials } from '@/data/testimonials'
 import { Star, Quote } from 'lucide-react'
 
@@ -9,6 +11,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 export default function TestimonialsCarousel() {
+  const swiperRef = useRef<SwiperType | null>(null)
+
   return (
     <section id="testimonials" className="py-20 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -42,10 +46,7 @@ export default function TestimonialsCarousel() {
               bulletClass: 'swiper-pagination-bullet !bg-primary',
               bulletActiveClass: 'swiper-pagination-bullet-active !bg-primary',
             }}
-            navigation={{
-              nextEl: '.testimonials-next',
-              prevEl: '.testimonials-prev',
-            }}
+            navigation={true}
             loop={true}
             breakpoints={{
               640: {
@@ -58,6 +59,7 @@ export default function TestimonialsCarousel() {
                 slidesPerView: 3,
               },
             }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             className="testimonials-carousel pb-20"
           >
             {testimonials.map((testimonial) => (
@@ -110,6 +112,7 @@ export default function TestimonialsCarousel() {
 
           {/* Custom navigation buttons */}
           <button
+            onClick={() => swiperRef.current?.slidePrev()}
             className="testimonials-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
             aria-label="Previous testimonial"
           >
@@ -128,6 +131,7 @@ export default function TestimonialsCarousel() {
             </svg>
           </button>
           <button
+            onClick={() => swiperRef.current?.slideNext()}
             className="testimonials-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
             aria-label="Next testimonial"
           >
@@ -149,8 +153,11 @@ export default function TestimonialsCarousel() {
       </div>
 
       <style>{`
+        .testimonials-carousel.swiper {
+          overflow: visible !important;
+        }
         .testimonials-carousel .swiper-pagination {
-          bottom: 0px !important;
+          bottom: -20px !important;
         }
         .testimonials-carousel .swiper-pagination-bullet {
           width: 10px;
