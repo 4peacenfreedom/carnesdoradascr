@@ -1,13 +1,12 @@
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 import type { Swiper as SwiperType } from 'swiper'
 import { testimonials } from '@/data/testimonials'
 import { Star, Quote } from 'lucide-react'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/navigation'
 
 export default function TestimonialsCarousel() {
   const swiperRef = useRef<SwiperType | null>(null)
@@ -32,7 +31,7 @@ export default function TestimonialsCarousel() {
         {/* Testimonials Carousel */}
         <div className="relative">
           <Swiper
-            modules={[Autoplay, Navigation]}
+            modules={[Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             autoplay={{
@@ -40,7 +39,6 @@ export default function TestimonialsCarousel() {
               disableOnInteraction: false,
             }}
             speed={600}
-            navigation={true}
             loop={true}
             breakpoints={{
               640: {
