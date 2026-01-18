@@ -1,13 +1,12 @@
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import { Autoplay, Navigation } from 'swiper/modules'
 import type { Swiper as SwiperType } from 'swiper'
 import { testimonials } from '@/data/testimonials'
 import { Star, Quote } from 'lucide-react'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 export default function TestimonialsCarousel() {
@@ -31,9 +30,9 @@ export default function TestimonialsCarousel() {
         </div>
 
         {/* Testimonials Carousel */}
-        <div className="relative overflow-visible">
+        <div className="relative">
           <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Navigation]}
             spaceBetween={30}
             slidesPerView={1}
             autoplay={{
@@ -41,11 +40,6 @@ export default function TestimonialsCarousel() {
               disableOnInteraction: false,
             }}
             speed={600}
-            pagination={{
-              clickable: true,
-              bulletClass: 'swiper-pagination-bullet !bg-primary',
-              bulletActiveClass: 'swiper-pagination-bullet-active !bg-primary',
-            }}
             navigation={true}
             loop={true}
             breakpoints={{
@@ -60,7 +54,7 @@ export default function TestimonialsCarousel() {
               },
             }}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-            className="testimonials-carousel pb-20"
+            className="testimonials-carousel"
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
@@ -151,23 +145,6 @@ export default function TestimonialsCarousel() {
           </button>
         </div>
       </div>
-
-      <style>{`
-        .testimonials-carousel.swiper {
-          overflow: visible !important;
-        }
-        .testimonials-carousel .swiper-pagination {
-          bottom: -20px !important;
-        }
-        .testimonials-carousel .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
-          opacity: 0.4;
-        }
-        .testimonials-carousel .swiper-pagination-bullet-active {
-          opacity: 1;
-        }
-      `}</style>
     </section>
   )
 }
