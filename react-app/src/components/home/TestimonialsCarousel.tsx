@@ -58,7 +58,7 @@ export default function TestimonialsCarousel() {
                 slidesPerView: 3,
               },
             }}
-            className="testimonials-carousel pb-12"
+            className="testimonials-carousel pb-16"
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
@@ -150,7 +150,7 @@ export default function TestimonialsCarousel() {
 
       <style>{`
         .testimonials-carousel .swiper-pagination {
-          bottom: 0 !important;
+          bottom: -10px !important;
         }
         .testimonials-carousel .swiper-pagination-bullet {
           width: 10px;
