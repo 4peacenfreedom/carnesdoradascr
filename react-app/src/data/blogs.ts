@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'importancia-cadena-frio',
     title: 'La importancia de la cadena de frío en carnes premium',
     description: 'Descubre por qué mantener la cadena de frío es fundamental para preservar la calidad y seguridad de las carnes.',
-    heroImage: '/assets/images/blog/blog_2.webp',
+    heroImage: '/assets/images/blog/blog_4.webp',
     heroImageAlt: 'Sistema de refrigeración de carnes',
     author: {
       name: 'María González',
@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'optimizar-costos-sin-sacrificar-calidad',
     title: 'Tips para optimizar costos sin sacrificar calidad',
     description: 'Estrategias profesionales para gestionar el inventario de carnes y reducir desperdicios en tu cocina.',
-    heroImage: '/assets/images/blog/blog_4.webp',
+    heroImage: '/assets/images/blog/blog_2.webp',
     heroImageAlt: 'Gestión de inventario de carnes',
     author: {
       name: 'Roberto Campos',
