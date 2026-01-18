@@ -27,7 +27,7 @@ export default function TestimonialsCarousel() {
         </div>
 
         {/* Testimonials Carousel */}
-        <div className="relative">
+        <div className="relative overflow-visible">
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={30}
