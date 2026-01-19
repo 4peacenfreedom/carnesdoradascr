@@ -33,7 +33,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/assets/images/logo_dark.svg"
+              src="/assets/images/logo.svg"
               alt="Carnes Doradas de Costa Rica"
               className="h-16 w-auto"
             />
