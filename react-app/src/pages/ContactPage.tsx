@@ -59,7 +59,7 @@ export default function ContactPage() {
       <section
         className="py-16 md:py-20 bg-cover bg-center relative"
         style={{
-          backgroundImage: 'url(/assets/images/contacto/carnesdoradascr_contacto_bg.webp)',
+          backgroundImage: 'url(/assets/images/backgrounds/footer-bg.png)',
         }}
       >
         {/* Overlay */}
