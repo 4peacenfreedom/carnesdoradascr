@@ -5,7 +5,7 @@ export const heroSlides: HeroSlide[] = [
     id: 'slide-1',
     title: 'CALIDAD PREMIUM PARA TU COCINA',
     subtitle: 'MÁS DE 20 AÑOS DE EXPERIENCIA',
-    image: '/assets/images/team/logo_dark.webp',
+    image: '/assets/images/logo.svg',
     cta: {
       text: 'Conócenos',
       link: '#nosotros',

@@ -18,7 +18,7 @@ export default function HeroSlider() {
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: 'url(/assets/images/shapes/meat_shapes.webp)',
+            backgroundImage: 'url(/assets/images/backgrounds/footer-bg.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'repeat',
