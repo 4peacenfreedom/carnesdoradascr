@@ -63,7 +63,7 @@ export default function ContactPage() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-white/90" />
+        <div className="absolute inset-0 bg-white/40" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

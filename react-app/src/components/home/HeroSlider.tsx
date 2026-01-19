@@ -16,7 +16,7 @@ export default function HeroSlider() {
       <div className="absolute inset-0">
         {/* Meat shapes background image */}
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-80"
           style={{
             backgroundImage: 'url(/assets/images/backgrounds/footer-bg.png)',
             backgroundSize: 'cover',
