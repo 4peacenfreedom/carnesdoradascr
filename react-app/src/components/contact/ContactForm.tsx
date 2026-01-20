@@ -135,7 +135,7 @@ export default function ContactForm() {
             ) : (
               <>
                 <Send className="w-4 h-4 mr-2" />
-                Enviar Mensaje
+                Enviar Mensaje por WhatsApp
               </>
             )}
           </Button>
@@ -145,7 +145,7 @@ export default function ContactForm() {
         {submitStatus === 'success' && (
           <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
             <p className="text-green-800 font-medium">
-              ¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.
+              ¡Mensaje enviado por WhatsApp! Nos vemos ahi.
             </p>
           </div>
         )}
