@@ -46,7 +46,7 @@ export default function ContactForm() {
       const whatsappMessage = encodeURIComponent(
         `Hola, mi nombre es ${data.name}.\n\nEmail: ${data.email}\n\nMensaje: ${data.message}`
       )
-      window.open(`https://wa.me/50688234567?text=${whatsappMessage}`, '_blank')
+      window.open(`https://wa.me/50684445138?text=${whatsappMessage}`, '_blank')
 
       setSubmitStatus('success')
       reset()

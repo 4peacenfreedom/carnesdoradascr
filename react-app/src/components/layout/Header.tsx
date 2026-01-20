@@ -23,7 +23,7 @@ export default function Header() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent('Hola, quisiera consultar sobre sus productos y servicios')
-    window.open(`https://wa.me/50688234567?text=${message}`, '_blank')
+    window.open(`https://wa.me/50684445138?text=${message}`, '_blank')
   }
 
   return (

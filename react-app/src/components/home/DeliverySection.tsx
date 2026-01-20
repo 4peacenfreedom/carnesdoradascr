@@ -14,7 +14,7 @@ export default function DeliverySection() {
     const message = encodeURIComponent(
       'Hola, quisiera consultar sobre el servicio de entrega en mi zona'
     )
-    window.open(`https://wa.me/50688234567?text=${message}`, '_blank')
+    window.open(`https://wa.me/50684445138?text=${message}`, '_blank')
   }
 
   return (

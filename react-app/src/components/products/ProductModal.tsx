@@ -22,7 +22,7 @@ export default function ProductModal({ product, open, onOpenChange }: ProductMod
     const message = encodeURIComponent(
       `Hola! Me interesa el producto: ${product.name}. Me gustaría obtener más información sobre precios y disponibilidad.`
     )
-    window.open(`https://wa.me/50688234567?text=${message}`, '_blank')
+    window.open(`https://wa.me/50684445138?text=${message}`, '_blank')
   }
 
   return (

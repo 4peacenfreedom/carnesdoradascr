@@ -267,9 +267,9 @@ Este proyecto está siendo desarrollado en la rama `claude/react-migration-analy
 
 ## 📞 Información de Contacto (del sitio)
 
-- **Email:** info@carnesdoradascr.com
+- **Email:** info@carnesdoradas.com
 - **Teléfono:** +506 2102-7323
-- **WhatsApp:** 8823-4567
+- **WhatsApp:** 8444-5138
 - **Ubicación:** 1 km al sur gasolinera las Tejitas, Alajuela
 - **Horario:** Lun-Vie 7:00 AM - 5:00 PM
 

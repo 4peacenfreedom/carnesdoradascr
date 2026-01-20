@@ -2,9 +2,9 @@ import type { ContactInfo, SocialMedia } from '@/types'
 
 // Información de contacto
 export const CONTACT_INFO: ContactInfo = {
-  email: 'info@carnesdoradascr.com',
+  email: 'info@carnesdoradas.com',
   phone: '+506 2102-7323',
-  whatsapp: '8823-4567',
+  whatsapp: '8444-5138',
   address: '1 km al sur gasolinera las Tejitas, Alajuela',
   coordinates: {
     lat: 9.989203,
