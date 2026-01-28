@@ -1,4 +1,4 @@
-import { Mail, MapPin, Clock } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants'
 
 export default function Topbar() {
@@ -8,14 +8,6 @@ export default function Topbar() {
         <div className="flex flex-col md:flex-row items-center justify-between py-3 gap-2">
           {/* Left side - Contact Info */}
           <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm">
-            <a
-              href={`mailto:${CONTACT_INFO.email}`}
-              className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="hidden sm:inline">{CONTACT_INFO.email}</span>
-            </a>
-
             <a
               href={`https://maps.google.com/?q=${CONTACT_INFO.coordinates.lat},${CONTACT_INFO.coordinates.lng}`}
               target="_blank"

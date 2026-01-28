@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react'
+import { Phone, MapPin, Facebook, Instagram } from 'lucide-react'
 import { CONTACT_INFO, SOCIAL_MEDIA } from '@/lib/constants'
 
 export default function Footer() {
@@ -140,15 +140,6 @@ export default function Footer() {
                 >
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:text-primary" />
                   <span>{CONTACT_INFO.phone}</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${CONTACT_INFO.email}`}
-                  className="flex items-start gap-3 text-sm hover:text-primary transition-colors group"
-                >
-                  <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:text-primary" />
-                  <span className="break-all">{CONTACT_INFO.email}</span>
                 </a>
               </li>
               <li>
