@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, MapPin } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants'
 
 export default function ContactInfo() {
@@ -89,26 +89,6 @@ export default function ContactInfo() {
                   </p>
                 </>
               )}
-            </div>
-          </div>
-
-          {/* Email */}
-          <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-primary/5 transition-colors">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-            </div>
-            <div className="flex-1">
-              <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold">
-                Email
-              </span>
-              <a
-                href={`mailto:${CONTACT_INFO.email}`}
-                className="block text-lg font-semibold text-dark hover:text-primary transition-colors mt-1 break-all"
-              >
-                {CONTACT_INFO.email}
-              </a>
             </div>
           </div>
 
